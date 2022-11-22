@@ -1,4 +1,5 @@
 .MovieCard{
+    position: relative;
     min-height: 20vh;
     min-width: 15vw;
     border: solid 1px#999999;
@@ -8,8 +9,6 @@
     height:60vh;
     cursor: pointer;
     font-size: 16px;
-    /* width: 38vw; */
-    /* height: 60vh; */
  
    
     
@@ -24,17 +23,15 @@
     color: whitesmoke;
 }
 
-@media screen and (max-width:768px) {
-    .MovieCard{
-        width: 35vw;
-    }
-}
 
-@media screen and (min-width:768px) and (max-width:1080px) {
+
+@media screen and (max-width:800px) {
     .MovieCard{
-        min-width: 20vw;
+        min-width: 30vw;
     }
-}
+} 
+
+
 
 .MovieCard > img {
     /* object-fit: contain; */

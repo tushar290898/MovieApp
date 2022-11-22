@@ -1,44 +1,87 @@
 .Movie-section{
     position: relative;
-    border: 1px, solid black;
+    max-width: 1300px;
+    width: 100%;
     padding: 0 50px;;
     min-height: 80vh;
-    top:100px;
+    top:100px; 
     display: grid;
-    gap: 20px;
-    grid-gap:20px;
-    grid-template-columns:repeat(4, minmax(0, 1fr));
+    gap: 15px;
+    grid-gap:15px;
+    grid-template-columns:repeat(5, minmax(0, 1fr));
     min-width: 20vw;
- 
-
+    overflow-x: hidden;
+    margin-right: auto;
+    margin-left: auto;
   
 }
 
-@media screen and (max-width:768px) {
+
+
+@media screen and (max-width:1100px) {
     .Movie-section{
-        grid-template-columns:repeat(2, minmax(0, 1fr));
+        grid-template-columns:repeat(4, minmax(0, 1fr));
     }
 }
+
+@media screen and (max-width:800px) {
+    .Movie-section{
+        grid-template-columns:repeat(3, minmax(0, 1fr));
+    }
+    .header-section > img{
+        min-width: 8vw;
+    }
+} 
 
 @media screen and (max-width:468px) {
     .Movie-section{
-        grid-template-columns:repeat(1, minmax(0, 1fr));
+        grid-template-columns:repeat(2, minmax(0, 1fr));
     }
-}
+    .searchBar{
+        width: 70vw;
+    }
+    .header-section > img{
+        min-width: 5vw;
+    }
+
+    .Message > h3 {
+        color: whitesmoke;
+        font-size: 12px;
+
+     }
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .searchBar{
-    flex: 1;
+    /* flex: 1; */
     margin-top: 10px;
     display: flex;
     justify-content:space-between;
     align-items: center;
     padding: 10px;
-    /* border: solid 1px lightgray; */
-    max-width:30vw;
-    min-width:15vw;
+    border: solid 1px lightgray;
+     max-width:30vw;
+    min-width:15vw; 
     border-radius: 15px;
     margin-left: auto;
-    margin-right: 10rem;
+    margin-right: auto;
     background-color:  #333333;
     
  
@@ -85,24 +128,24 @@
  }
 
  .header-section > img{
-    /* min-width: 15vw; */
-    height: 27px;
+    min-width: 10vw;
+    height: 20px;
     margin-left: 20px;
-    width: 150px;
-    /* border: 1px solid white; */
+  
  }
 
- .navList{
-    margin-right: 25px;
- }
+ .Message {
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80vw;
+    padding-top: 30px;
+    
 
- .navList > a {
-    text-decoration: none;
-    color:#a6a6a6;
-    margin-right: 10px;
  }
- 
- .navList > a :hover{
-    color: #f9f9f9;
+ .Message > h3 {
+    color: whitesmoke;
+    font-size: 25px;
+    margin-top: 26px;
  }
- 

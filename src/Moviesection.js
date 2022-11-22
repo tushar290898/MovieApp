@@ -12,7 +12,7 @@ function Moviesection() {
     const [searchTerm, setSearchTerm] = useState("")
 
     const searchMovies = (title) => {
-        const apiURL = `http://www.omdbapi.com?apikey=f70cb7b6&s=${title}`
+        const apiURL = `https://www.omdbapi.com?apikey=f70cb7b6&s=${title}`
         axios(apiURL).then((res) => {
             console.log("data", res.data.Search);
             setMovies(res.data.Search)
@@ -39,12 +39,6 @@ function Moviesection() {
                     <input value={searchTerm} onChange={e => setSearchTerm(e.target.value)} placeholder='Search for movies...' />
                     <SearchIcon onClick={searchHandle} />
                 </div>
-                <ul className='nav'>
-                    <li className='navList'>
-                        <a href='#'>Contact Us</a>
-                        <a href='#'>About Us</a>
-                    </li>
-                </ul>
             </div>
 
 
@@ -60,8 +54,8 @@ function Moviesection() {
                             />
 
                         )) :
-                        <div>
-                            <h3>No Movies Available</h3>
+                        <div className='Message'>
+                            <h3> Sorry... No Movies Available</h3>
                         </div>
                 }
 
