@@ -4,9 +4,11 @@ import './Moviecard.css'
 function Moviecard({title, year, poster}) {
   return (
     <div className='MovieCard'>
-        <img src={poster}/>
-        <h3>{year}</h3>
-        <p>{title}</p>
+        <div className='moviecard-img'>
+          <img src={poster}/>
+        </div>
+        <h2>{year}</h2>
+        <h2>{title}</h2>
     </div>
   )
 }
